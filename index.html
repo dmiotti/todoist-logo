@@ -1,0 +1,40 @@
+<html>
+<body>
+  <div class="logo">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" fill-rule="evenodd">
+        <path class="square" d="M28 0H4C1.8 0 0 1.8 0 4v24c0 2.2 1.8 4 4 4h24c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4" fill="#E44332" />
+        <path class="mark mark-1" d="M6.792 15.157l12.865-7.479c.275-.16.289-.653-.02-.83-.308-.178-.893-.514-1.111-.643a1.004 1.004 0 0 0-.991.012c-.154.09-10.433 6.06-10.776 6.256-.412.236-.92.24-1.33 0L0 9.287v2.708c1.321.778 4.607 2.71 5.403 3.165.475.27.93.264 1.389-.003" fill="#FFF" />
+        <path class="mark mark-2" d="M6.792 20.277l12.865-7.479c.275-.16.289-.653-.02-.83-.308-.178-.893-.514-1.111-.643a1.004 1.004 0 0 0-.991.012c-.154.09-10.433 6.06-10.776 6.256-.412.236-.92.24-1.33 0L0 14.407v2.708c1.321.778 4.607 2.71 5.403 3.165.475.27.93.264 1.389-.003" fill="#FFF" />
+        <path class="mark mark-3" d="M6.792 25.717l12.865-7.479c.275-.16.289-.653-.02-.83-.308-.178-.893-.514-1.111-.643a1.004 1.004 0 0 0-.991.012c-.154.09-10.433 6.06-10.776 6.256-.412.236-.92.24-1.33 0L0 19.847v2.708c1.321.778 4.607 2.71 5.403 3.165.475.27.93.264 1.389-.003" fill="#FFF" />
+      </g>
+    </svg>
+  </div>
+
+  <div class="controls">
+    <div class="control animation">
+      <button onclick="startAnimation()">Start animation</button>
+      <button onclick="stopAnimation()">Stop animation</button>
+    </div>
+
+    <div class="control styles">
+      <button onclick="useColor('#E44332')">Todoist color</button>
+      <button onclick="useColor('#316fea')">Twist color</button>
+    </div>
+
+    <div class="control styles">
+      <button onclick="useColor('#2D2D2D')">Black color</button>
+      <button onclick="useColor('gray')">Gray color</button>
+    </div>
+
+    <div class="control custom">
+      <form onsubmit="return useCustomColor()">
+        <input id="color-input" type="text">
+        <input type="submit" value="Use">
+      </form>
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>

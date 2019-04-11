@@ -1,0 +1,89 @@
+body {
+  display: flex;
+  margin: 40px;
+}
+
+button, input {
+  -webkit-appearance: none;
+  height: 30px;
+}
+
+.controls {
+  margin: 20px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+
+  .control {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+  }
+
+  .animation {
+    button {
+      &:nth-child(1) {
+        margin-right: 4px;
+      }
+      &:nth-child(2) {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .styles {
+    button {
+      flex: 1;
+      &:nth-child(1) {
+        margin-right: 4px;
+      }
+      &:nth-child(2) {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .custom {
+    form {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    input {
+      flex: 1;
+    }
+    input[type="submit"] {
+      margin-left: 8px;
+    }
+  }
+}
+
+.logo {
+  width: 320px;
+  height: 320px;
+
+  svg {
+    @keyframes checked {
+      0% {
+        opacity: 0;
+        clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
+      }
+
+      30% {
+        opacity: 1;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    .mark-1.animated {
+      animation: checked 2s ease-in infinite;
+    }
+
+    .mark-2.animated {
+      animation: checked 2s ease-in 0.2s infinite;
+    }
+
+    .mark-3.animated {
+      animation: checked 2s ease-in 0.4s infinite;
+    }
+  }
+}
